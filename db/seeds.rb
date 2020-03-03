@@ -1,0 +1,1 @@
+nirvana = Artist.create(name: "Nirvana", age: 33, 12)
