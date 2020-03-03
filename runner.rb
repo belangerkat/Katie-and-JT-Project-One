@@ -1,6 +1,9 @@
 require_relative 'config/environment'
 
-Cli.new.start_game
+
+
+“Welcome to Discover New Music!” 
+
 
 
 
