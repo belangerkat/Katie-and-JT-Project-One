@@ -27,3 +27,59 @@
 
 
 
+
+
+
+
+
+
+
+
+song1 = Song.create(name: "Girl Like You", artist: maroon5)
+song2 = Song.create(name: "Memories", artist: maroon5)
+song3 = Song.create(name: "Shallow", artist: lady gaga)
+song4 = Song.create(name: "Stupid Love", artist: lady gaga)
+song5 = Song.create(name: "Fighter", artist: christina_aguilera)
+song6 = Song.create(name: "Beautiful", artist: christina_aguilera)
+song7 = Song.create(name: "That's What I Like", artist: bruno_mars)
+song8 = Song.create(name: "24k Magic", artist: bruno_mars)
+song9 = Song.create(name: "Black", artist: pearl_jam)
+song10 = Song.create(name: "Alive", artist: pearl_jam)
+song11 = Song.create(name: "Wish You Were Here", artist: pink_floyd)
+song12 = Song.create(name: "Comfortably Numb", artist: pink_floyd)
+song13 = Song.create(name: "Smells Like Teen Spirit", artist: nirvana)
+song14 = Song.create(name: "Come As You Are", artist: nirvana)
+song15 = Song.create(name: "Back In Black", artist: ac_dc)
+song16 = Song.create(name: "Thunderstruck", artist: ac_dc)
+song17 = Song.create(name: "Stairway to Heaven", artist: led_zeppelin)
+song18 = Song.create(name: "Immigrant Song", artist: led_zeppelin)
+song19 = Song.create(name: "Slide", artist: calvin_harris)
+song20 = Song.create(name: "This Is What You Came For", artist: calvin_harris)
+song21 = Song.create(name: "Disarm You", artist: kaskade)
+song22 = Song.create(name: "Never Sleep Alone", artist: kaskade)
+song23 = Song.create(name: "Never Be Like You", artist: flume)
+song24 = Song.create(name: "Say It", artist: flume)
+song25 = Song.create(name: "Bangarang", artist: skrillex)
+song26 = Song.create(name: "Scary Monsters and Nice Sprites", artist: skrillex)
+song27 = Song.create(name: "We're All We Need", artist: above_and_beyond)
+song28 = Song.create(name: "Night Light", artist: above_and_beyond)
+song29 = Song.create(name: "Mona Lisa", artist: lil_wayne)
+song30 = Song.create(name: "Uproar", artist: lil_wayne)
+song31 = Song.create(name: "Weekend", artist: mac_miller)
+song32 = Song.create(name: "Self Care", artist: mac_miller)
+song33 = Song.create(name: "It's A Vibe", artist: 2_chainz)
+song34 = Song.create(name: "4 AM", artist: 2_chainz)
+song35 = Song.create(name: "Godzilla", artist: eminem)
+song36 = Song.create(name: "Lucky You", artist: eminem)
+song37 = Song.create(name: "SICKO MODE", artist: travis_scott)
+song38 = Song.create(name: "goosebumps", artist: travis_scott)
+song39 = Song.create(name: "Wide Open Spaces", artist: dixie_chicks)
+song40 = Song.create(name: "Cowboy Take Me Away", artist: dixie_chicks)
+song41 = Song.create(name: "Hurt", artist: johnny_cash)
+song42 = Song.create(name: "Ring of Fire", artist: johnny_cash)
+song43 = Song.create(name: "Jolene", artist: dolly_parton)
+song44 = Song.create(name: "9 to 5", artist: dolly_parton)
+song45 = Song.create(name: "Blue Ain't Your Color", artist: keith_urban)
+song46 = Song.create(name: "The Fighter", artist: keith_urban)
+song47 = Song.create(name: "Get Along", artist: kenny_chesney)
+song48 = Song.create(name: "American Kids", artist: kenny_chesney)
