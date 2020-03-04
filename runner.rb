@@ -1,8 +1,11 @@
 require_relative 'config/environment'
+require 'pry'
 
+my_app = Cli.new
 
-
-“Welcome to Discover New Music!” 
+my_app.welcome
+my_app.pick_genre
+binding.pry
 
 
 

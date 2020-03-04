@@ -1,4 +1,5 @@
 class Genre < ActiveRecord::Base
-    belongs_to: artist
-    belongs_to: song
+    has_many :favorites
+    has_many :users, through: :favorites
+    has_many :artists
 end
