@@ -7,7 +7,6 @@ dance = Genre.create(genre_name: "Dance")
 hip_hop_rap = Genre.create(genre_name: "Hip-Hop/Rap")
 country = Genre.create(genre_name: "Country")
 
-
 maroon5 = Artist.create(name: "Maroon 5", genre: pop)
 lady_gaga = Artist.create(name: "Lady Gaga", genre: pop)
 christina_aguilera = Artist.create(name: "Christina Aguilera", genre: pop)
@@ -33,21 +32,10 @@ dolly_parton = Artist.create(name: "Dolly Parton", genre: country)
 keith_urban = Artist.create(name: "Keith Urban", genre: country)
 kenny_chesney = Artist.create(name: "Kenny Chesney", genre: country)
 
-
-
-
-
-
-
-
-
-
-
-
 song1 = Song.create(name: "Girl Like You", artist: maroon5)
 song2 = Song.create(name: "Memories", artist: maroon5)
-song3 = Song.create(name: "Shallow", artist: lady gaga)
-song4 = Song.create(name: "Stupid Love", artist: lady gaga)
+song3 = Song.create(name: "Shallow", artist: lady_gaga)
+song4 = Song.create(name: "Stupid Love", artist: lady_gaga)
 song5 = Song.create(name: "Fighter", artist: christina_aguilera)
 song6 = Song.create(name: "Beautiful", artist: christina_aguilera)
 song7 = Song.create(name: "That's What I Like", artist: bruno_mars)
@@ -76,8 +64,8 @@ song29 = Song.create(name: "Mona Lisa", artist: lil_wayne)
 song30 = Song.create(name: "Uproar", artist: lil_wayne)
 song31 = Song.create(name: "Weekend", artist: mac_miller)
 song32 = Song.create(name: "Self Care", artist: mac_miller)
-song33 = Song.create(name: "It's A Vibe", artist: 2_chainz)
-song34 = Song.create(name: "4 AM", artist: 2_chainz)
+song33 = Song.create(name: "It's A Vibe", artist: two_chainz)
+song34 = Song.create(name: "4 AM", artist: two_chainz)
 song35 = Song.create(name: "Godzilla", artist: eminem)
 song36 = Song.create(name: "Lucky You", artist: eminem)
 song37 = Song.create(name: "SICKO MODE", artist: travis_scott)
