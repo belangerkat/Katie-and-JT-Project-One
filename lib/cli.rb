@@ -56,7 +56,6 @@ class Cli
 
     def pick_favorites
         choice = prompt.select("Please choose a Genre:", genre_names)
-
         artist_choice = prompt.select("Please add this genre to your favorites or choose an artist you like in this genre:", genre_artists(choice)+favorite_option+main_menu_option)
         
         if artist_choice == favorite_option.join

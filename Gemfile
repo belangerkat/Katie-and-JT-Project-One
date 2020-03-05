@@ -14,3 +14,5 @@ gem "require_all", "~> 3.0"
 
 gem 'tty-prompt'
 
+gem 'whirly'
+gem 'paint' # makes whirly colorful (recommended)
