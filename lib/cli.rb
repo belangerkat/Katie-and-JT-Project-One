@@ -67,6 +67,7 @@ class Cli
         genre_choice = prompt.select("Please choose an artist you like in this genre:", artist_selection(choice))
         #add_joint = add_favorite(favorite_genre)
 
+        
     end
 
 end
