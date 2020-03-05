@@ -19,7 +19,28 @@ class Cli
         end
         #Genre.all.map(&:genre_name)
     end
+
+    def add_favorite(genre)
+        Favorite.create(user: new_user, genre: genre)
+    end
     
+    def artist_selection(choice)
+        favorite_genre = Genre.all.find do |genre|
+            genre.genre_name == choice
+        end
+        artist_selection = favorite_genre.artists.map do |artist|
+            artist.name
+        end
+    end
+
+    def song_selection(genre_choice)
+        favorite_artist = Artist.all.find do |artist|
+            artist.name == genre_choice
+        end
+        song_selection = favorite_artist.songs.map do |song|
+            song.name
+        end
+    end
 
     def pick_favorites
         choice = prompt.select("Please choose a Genre:", genre_selection)
@@ -30,12 +51,7 @@ class Cli
         # Rock
         # Dance
 
-        favorite_genre = Genre.all.find do |genre|
-                genre.genre_name == choice
-            end
-        artist_selection = favorite_genre.artists.map do |artist|
-            artist.name
-        end
+
 
         # if choice == "Pop"
         #     pop_choice = prompt.select("Please choose an artist you like in this genre:", artist_selection)
@@ -48,14 +64,9 @@ class Cli
         # else #choice == "Country"
         #     country_choice = prompt.select("Please choose an artist you like in this genre:", artist_selection)
         # end
-        genre_choice = prompt.select("Please choose an artist you like in this genre:", artist_selection)
+        genre_choice = prompt.select("Please choose an artist you like in this genre:", artist_selection(choice))
+        #add_joint = add_favorite(favorite_genre)
 
-        favorite_artist = Artist.all.find do |artist|
-            artist.name == genre_choice
-        end
-        song_selection = favorite_artist.songs.map do |song|
-            song.name
-        end
     end
 
 end
