@@ -4,7 +4,8 @@ require 'pry'
 my_app = Cli.new
 
 my_app.welcome
-my_app.pick_genre
+
+my_app.pick_favorites
 binding.pry
 
 
