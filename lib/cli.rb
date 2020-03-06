@@ -59,10 +59,10 @@ class Cli
         end
     end
 
-    # def view_favorite_genres
-    #     Favorite.user
+    def view_favorite_genres
+        Favorite.user
     
-    # end
+    end
 
     # def artist_choice_prompt(genre_choice)
     #     prompt.select("Please add this genre to your favorites or choose an artist you like in this genre:", genre_artists(genre_choice)+ favorite_option + main_menu_option)
