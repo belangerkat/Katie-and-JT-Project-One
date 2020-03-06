@@ -1,5 +1,6 @@
 Artist.destroy_all
 Genre.destroy_all
+Song.destroy_all
 
 pop = Genre.create(genre_name: "Pop")
 rock = Genre.create(genre_name: "Rock")

@@ -1,5 +1,5 @@
-Whirly.configure spinner: "dots"
+# Whirly.configure spinner: "dots"
 
-Whirly.start do
-  sleep 2
-end
+# Whirly.start do
+#   sleep 2
+# end
