@@ -4,7 +4,7 @@ class Cli
     attr_reader :new_user
 
     def welcome
-        #welcome_pic = system("imgcat lib/StockSnap_QVGSXCGO6J.jpg")
+        welcome_pic = system("imgcat lib/StockSnap_QVGSXCGO6J.jpg")
         puts "Welcome to Discover Artist Music!"
         puts "Create a user name"
 
@@ -41,7 +41,8 @@ class Cli
     end
 
     def add_favorite(user_genre_selection)
-        Favorite.create(user: new_user, genre: user_genre_selection) 
+        Favorite.create(user: @new_user, genre: user_genre_selection) 
+        
     end
     
     def genre_artists(user_genre_selection)
@@ -61,13 +62,31 @@ class Cli
 
     def view_favorite_genres  #view all favorite genres from that user
         #we want User_instantce.genre
-        @new_user.genres.map(&:genre_name) 
+        #binding.pry
+        #@new_user.genres.map(&:genre_name) 
+        # @new_user.favorites.map do |favorite|
+        #     favorite.genre
+        # end
+        # #user_favorite_genres = @new_user.favorites.map(&:genre)
+
+        user_favorites = Favorite.all.select do |favorite|
+            favorite.user == @new_user
+        end
+
+        favorite_genres  = user_favorites.map do |user_favorite|
+            user_favorite.genre
+        end
+
+        favorite_genres.map do |favorite_genre|
+            puts favorite_genre.genre_name
+        end
     end
 
     # def user_artist_selection(genre_choice)
     #     prompt.select("Please add this genre to your favorites or choose an artist you like in this genre:", genre_artists(genre_choice)+ add_favorite_option + main_menu_option)
     # end
     def user_genre_selection
+        genre_pic = system("imgcat lib/genre.png")
         @user_genre_selection_result = prompt.select("Please choose a Genre:", genre_names)
     end
 
@@ -91,8 +110,7 @@ class Cli
             user_artist_selections
         elsif user_artist_selection == my_favorites.join
             #binding.pry
-
-            puts view_favorite_genres
+            view_favorite_genres
             user_artist_selections
         else
             user_song_selection = prompt.select("Here are #{user_artist_selection}'s Top Two Songs!", artist_songs(@user_artist_selection_result)+main_menu_option)
