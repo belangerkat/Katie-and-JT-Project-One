@@ -1,71 +1,44 @@
-# Mod 1 ActiveRecord Starter Repo
-
-In `config/database.yml`, you can change the name of the database from `db/cats.sqlite3` to whatever reflects your project. For example: `db/notes.sqlite3`. Doesn't really matter what you call the db. 
-
+# Mod 1 Project: Discover New Music!
+Discover New Music is a Command Line Interface(CLI) Application that a user interacts with. The user is able to select a genre from a collection of popular genres. After selecting a genre, the user is given a list of popular artists within that genre and an option to add the genre to their favorites. If the user selects an artist, they are given that artist's top two songs on Apple Music. If the user selects "Add Genre to Favorites," the genre is saved to the user's Favorites. Each command gives the user the option to return to the main menu or view their favorites, in addition to making their genre or artist selections.
 
 
-## ActiveRecord Methods
-These common ActiveRecord methods will help you interact with your database. Please refer to the ActiveRecord
-docs for what they do and how to use them. (If the docs talk about Rails, that is ok! ActiveRecord works very
- similar with or without Rails.)
-```
-  .create (.new, .save)
-  .all
-  .count
-  .find
-  .find_by
-  .where
-```
+# Code
+Discover New Music's code uses the tty gem to enable the user's ability to select from a list of options. For example:
 
-#### Notes
+ def prompt
+        TTY::Prompt.new
+  end 
 
-*Remember*, any model that will have a corresponding table in the database needs to inherit from `ActiveRecord::Base`
-ex:
-```
-class Cat < ActiveRecord::Base
-  # customer methods defined here
-end
-```
+ user_artist_selection = prompt.select("Please add this genre to your favorites or choose an artist you like in this genre:", genre_artists(user_genre_selection) + add_favorite_option + view_favorites_option + main_menu_option)
 
-- To view database, you can run `sqlite3 db/cats.db`, then can run `.schema` or `.tables` and can run any SQL commands. (Don't need to do this anymore though! ActiveRecord gives us a schema file!)
+ ##TTY prompt takes the elements of an array and lists them as options to choose from
 
 
-### Steps to setup Ruby app with activerecord
-(New for ActiveRecord 6.0)
+# Motivation
+Discover New Music's purpose is to make it easier for users find new songs in their favorite genres.
 
 
-## The following steps are already done for you in this boiler plate repo. 
-## The steps below are provided to you as a reference only. 
-## You're not expected to memorize this (please don't).
+# Installation
+1. To install gems wihthin th project run `bundle install`
+2. To seed the data in the project run `rake db:migrate`
 
 
-1. In root of project, run `bundle init`
-1. Add gems: 
-  `bundle add activerecord pry sinatra, sinatra-activerecord rake sqlite3 require_all`
-  run `bundle install`
-1. mkdir config and lib 
-1. mkdir lib/models
-1. touch config/environment.rb config/database.yml
-1. Create your model files and models (make sure to have your models inherit from ActiveRecord::Base)
-1. In config/environment.rb:
-```
-  require 'bundler/setup'
-  Bundler.require
+# Tests
+To run tests within the project:
+ 1. Add `binding.pry` in between methods in cli.rb 
+ 2. OR put a pry in environment.rb to run <ModelName>.all and see your seeds
+ 3. Run the program with `ruby runner.rb`
+ 4. Run tests within pry in the terminal
 
-  require_all 'lib'
-```
-1. In config/database.yml:
-  ```
-  development:
-    adapter: sqlite3
-    database: db/cats.sqlite3
-  ```
-1. Touch Rakefile - require ‘config/environment.rb’ and require_relative ‘sinatra/activerecord/rake’ 
-1. Run rake -T to make sure we have access to raketasks
-1. Run `rake db:create_migration NAME=create_cats_table` (will create the db folder if it doesn’t already exist) and will add the migration file to db/migration
-1. Write migration file, then run `rake db:migrate`
-1. Then can see schema in file structure, can also drop into sqlite3 cats.db to see the tables and schema, but don’t really need to do that anymore. *Review rollback here*
-1. Create seeds in db/seeds.rb and run `rake db:seed`
-1. Now can put a pry in environment.rb to run <ModelName>.all and see your seeds.
 
-Make sure your models inherit from `ActiveRecord::Base`
+ # Tech/ Framework
+Discover New Music is built using SQLite3, ActiveRecord, and Ruby
+
+
+# Credits
+
+Discover New Music was constructed by:
+  JT Lu
+  Katie Belanger
+
+
